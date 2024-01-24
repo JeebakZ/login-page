@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" oninput="checkPasswordStrength()" required>
+                <div class="password-strength">
+                    <div class="strength-bar" id="strengthBar"></div>
+                    <div class="strength-text" id="strengthText"></div>
+                </div>
+            </div>
+            <button type="submit">Login</button>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+                <label for="darkModeToggle">Dark Mode</label>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
